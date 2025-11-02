@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Budi Rahayu</title>
+  <link rel="stylesheet" href="css/style-login.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="login-section">
+      <h2>Log In</h2>
+      <p>Masuk untuk mengakses halaman Budi Rahayu</p>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Masukkan username" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Masukkan password" required />
+        </div>
+        <button type="submit" class="btn-login">Log In</button>
+        <p id="error-msg"></p>
+      </form>
+    </div>
+
+    <div class="info-section">
+      <div class="overlay">
+        <h1>START YOUR JOURNEY HERE</h1>
+        <p>Bersama Yayasan Budi Rahayu — Menebar kebahagiaan dan keberkahan untuk semua.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
