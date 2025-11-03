@@ -8,6 +8,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
+<script src="js/anak.js"></script>
+<script>
+  // Preview 6 anak random di halaman beranda
+  (function () {
+    const target = document.getElementById("homeAnakGrid");
+    if (!target) return;
+    const pick = ANAK_DATA.sort(() => 0.5 - Math.random()).slice(0, 6);
+    target.innerHTML = pick.map(a => `
+      <div class="anak-card">
+        <img src="${a.img}" alt="${a.nama}" onerror="this.src='img/anak/default-avatar.png'" />
+        <div>
+          <h3>${a.nama}</h3>
+          <p>${a.deskripsi}</p>
+          <div class="anak-meta">Usia ${a.usia} • ${a.kelas}</div>
+          <div class="card-actions">
+            <a href="anak-detail.html?id=${a.id}">Lihat detail →</a>
+          </div>
+        </div>
+      </div>
+    `).join("");
+  })();
+</script>
+
 <body>
 
   <!-- ===== Navbar ===== -->
@@ -22,6 +46,7 @@
         <a href="donasi.html">Donasi</a>
         <a href="berita.html">Berita</a>
         <a href="kontak-kami.html">Kontak Kami</a>
+        <a href="anak.html" class=>Anak</a>
         <a href="login.html" class="login-btn">Login</a>
       </nav>
     </div>
